@@ -1,3 +1,5 @@
+package com.example.bundle;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,34 +29,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnPassBundles:
-                // creating a bundle instance
-                Bundle bundle = new Bundle();
-                // passing the data into the bundle
-                bundle.putString(
-                        "key1",
-                        "Passing Bundle From Main Activity to 2nd Activity");
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                // passing the bundle to the intent
-                intent.putExtras(bundle);
-                // starting the activity by passing the intent
-                // to it.
-                startActivity(intent);
-                break;
-
-            case R.id.btnNoPassBundle:
-                bundle = new Bundle();
-                bundle.putString(
-                        "key1",
-                        "Not passing Bundle From Main Activity");
-                // clearing the data stored into the bundle
-                bundle.clear();
-                // passing the intent to the second activity
-                intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                break;
+        int id = view.getId();
+        if (id == R.id.btnPassBundles) {
+            Bundle bundle = new Bundle();
+            bundle.putString("key1", "Passing Bundle From Main Activity to 2nd Activity");
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        } else if (id == R.id.btnNoPassBundle) {
+            Bundle bundle = new Bundle();
+            bundle.putString("key1", "Not passing Bundle From Main Activity");
+            bundle.clear();
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
+
 }

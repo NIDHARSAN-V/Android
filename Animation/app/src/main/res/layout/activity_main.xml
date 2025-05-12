@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- TextView to display the name "Nidharsan" -->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Nidharsan"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide Animation" />
+
+    <Button
+        android:id="@+id/button_bulge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bulge Animation" />
+
+    <Button
+        android:id="@+id/button_shrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shrink Animation" />
+
+    <Button
+        android:id="@+id/button_fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fade Animation" />
+
+    <Button
+        android:id="@+id/button_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate Animation" />
+
+    <Button
+        android:id="@+id/button_bounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bounce Animation" />
+
+    <Button
+        android:id="@+id/button_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alpha Animation" />
+
+    <Button
+        android:id="@+id/button_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scale Animation" />
+
+    <Button
+        android:id="@+id/button_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Translate Animation" />
+
+    <Button
+        android:id="@+id/button_slide_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide Up Animation" />
+
+</LinearLayout>
