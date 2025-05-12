@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/nameInput"
+        android:hint="Enter Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Phone Input -->
+    <EditText
+        android:id="@+id/phoneInput"
+        android:hint="Enter Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"/>
+
+    <!-- Add Contact Button -->
+    <Button
+        android:id="@+id/addContactButton"
+        android:text="Add Contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Contact List -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

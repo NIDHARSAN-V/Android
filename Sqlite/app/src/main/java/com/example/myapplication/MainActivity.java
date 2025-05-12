@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // Initializing DBHandler
         dbHandler = new DBHandler(MainActivity.this);
 
-         loadCourses();
+        loadCourses();
 
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
